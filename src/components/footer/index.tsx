@@ -1,21 +1,25 @@
 "use client";
-import { RiGithubFill, RiLinkedinFill, RiMailLine } from "@remixicon/react";
+import {
+  RiGithubFill,
+  RiLinkedinFill,
+  RiMailLine,
+  RiTelegram2Fill,
+} from "@remixicon/react";
 import Link from "next/link";
 
 export default function Footer() {
   const socialLinks = [
     {
-      href: "/",
-      label: "github",
+      href: "https://t.me/timw0512",
       icon: (
-        <RiGithubFill
+        <RiTelegram2Fill
           size={24}
           className="text-(--color-primitive-slate-500)"
         />
       ),
     },
     {
-      href: "/about",
+      href: "https://www.linkedin.com/in/timw0512/",
       label: "linkedin",
       icon: (
         <RiLinkedinFill
@@ -25,7 +29,7 @@ export default function Footer() {
       ),
     },
     {
-      href: "/projects",
+      href: "mailto:timw051201@gmail.com?subject=Contact From Portfolio &body=Hello, I'm ...",
       label: "e-mail",
       icon: (
         <RiMailLine
@@ -34,7 +38,6 @@ export default function Footer() {
         />
       ),
     },
-    // { href: "/contact", label: "_contact-me" },
   ];
   return (
     <footer className="w-full flex flex-row justify-between border-t border-(--color-theme-stroke)">
@@ -57,8 +60,7 @@ export default function Footer() {
       </div>
       <Link
         target="_blank"
-        href="/contact"
-        key="contact"
+        href="https://github.com/H-Timw"
         className="px-(--spacing-7) py-(--spacing-5) border-l border-l-(--color-theme-stroke)  flex flex-row gap-(--spacing-3) "
       >
         <p className="text-md text-(--color-theme-foreground)">@H-Timw</p>
