@@ -25,7 +25,7 @@ export default function RootLayout({
       <body
         className={`${firaCode.variable} antialiased flex flex-col justify-center items-center w-screen h-screen bg-(--color-theme-backdrop)`}
       >
-        <main className="flex flex-col justify-center items-center border rounded-lg border-(--color-theme-stroke) w-full h-full max-w-[1782px] bg-(--color-theme-background)">
+        <main className="flex flex-col justify-center items-center border rounded-lg border-(--color-theme-stroke) w-full h-full max-w-[1782px] max-h-[940px] bg-(--color-theme-background)">
           <Header />
           {children}
           <Footer />
