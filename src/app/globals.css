@@ -147,6 +147,8 @@
   /* color theme */
   --color-theme-stroke: #314158;
   --color-theme-foreground: #90A1B9;
+  --color-theme-background: #0f172b;
+  --color-theme-backdrop: #020618;
   --color-heading-foreground:#f8fafc;
   --color-primary-background: #ffb86a;
 
@@ -209,7 +211,6 @@
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-fira);
 }

@@ -25,8 +25,9 @@ export default function Header() {
               className={clsx(
                 "px-(--spacing-7) py-(--spacing-5) border-r border-r-(--color-theme-stroke)",
                 {
-                  "--color-heading-foreground border-b-2 border-b-(--color-primary-background)":
+                  "text-(--color-heading-foreground) border-b-2 border-b-(--color-primary-background)":
                     pathName === navItem.href,
+                  "text-(--color-theme-foreground)": pathName !== navItem.href,
                 }
               )}
             >
@@ -35,20 +36,15 @@ export default function Header() {
           ))}
         </div>
       </div>
-      <button
-        type="button"
-        className="px-(--spacing-7) py-(--spacing-5) border-l border-(--color-theme-stroke)"
-      >
-        <p className="text-(--color-theme-foreground)">_contact-me</p>
-      </button>
       <Link
         href="/contact"
         key="contact"
         className={clsx(
           "px-(--spacing-7) py-(--spacing-5) border-l border-l-(--color-theme-stroke)",
           {
-            "--color-heading-foreground border-b-2 border-b-(--color-primary-background)":
+            "text-(--color-heading-foreground) border-b-2 border-b-(--color-primary-background)":
               pathName === "/contact",
+            "text-(--color-theme-foreground)": pathName !== "/contact",
           }
         )}
       >

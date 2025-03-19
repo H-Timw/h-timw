@@ -10,7 +10,7 @@ export default function Footer() {
       icon: (
         <RiGithubFill
           size={24}
-          className="--color-primitive-slate-500"
+          className="text-(--color-primitive-slate-500)"
         />
       ),
     },
@@ -20,7 +20,7 @@ export default function Footer() {
       icon: (
         <RiLinkedinFill
           size={24}
-          className="--color-primitive-slate-500"
+          className="text-(--color-primitive-slate-500)"
         />
       ),
     },
@@ -30,7 +30,7 @@ export default function Footer() {
       icon: (
         <RiMailLine
           size={24}
-          className="--color-primitive-slate-500"
+          className="text-(--color-primitive-slate-500)"
         />
       ),
     },
@@ -63,7 +63,7 @@ export default function Footer() {
         <p className="text-md text-(--color-theme-foreground)">@H-Timw</p>
         <RiGithubFill
           size={24}
-          className="--color-primitive-slate-500"
+          className="text-(--color-primitive-slate-500)"
         />
       </Link>
     </footer>
