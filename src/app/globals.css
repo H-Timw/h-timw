@@ -151,8 +151,10 @@
   --color-theme-backdrop: #020618;
   --color-heading-foreground:#f8fafc;
   --color-primary-background: #ffb86a;
+  --color-theme-link-foreground: #FFA1AD;
 
   /* spacing */
+  --spacing: 2px;
   --spacing-1: 2px;
   --spacing-2: 4px;
   --spacing-3: 8px;

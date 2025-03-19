@@ -56,6 +56,7 @@ export default function Footer() {
         </div>
       </div>
       <Link
+        target="_blank"
         href="/contact"
         key="contact"
         className="px-(--spacing-7) py-(--spacing-5) border-l border-l-(--color-theme-stroke)  flex flex-row gap-(--spacing-3) "
