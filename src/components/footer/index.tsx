@@ -42,7 +42,7 @@ export default function Footer() {
   return (
     <footer className="w-full flex flex-row justify-between border-t border-(--color-theme-stroke)">
       <div className="flex header-name flex-row">
-        <div className="px-(--spacing-6) py-(--spacing-5) border-r border-(--color-theme-stroke)">
+        <div className="px-12 py-8 border-r border-(--color-theme-stroke)">
           <p className="text-md text-(--color-theme-foreground)">find me in:</p>
         </div>
         <div className="flex flex-row">
@@ -51,7 +51,7 @@ export default function Footer() {
               target="_blank"
               href={social.href}
               key={`${social.href}_${index}`}
-              className="p-(--spacing-5) border-r border-r-(--color-theme-stroke) flex flex-row gap-(--spacing-3)"
+              className="p-8 border-r border-r-(--color-theme-stroke) flex flex-row gap-4"
             >
               {social?.icon}
             </Link>
@@ -61,7 +61,7 @@ export default function Footer() {
       <Link
         target="_blank"
         href="https://github.com/H-Timw"
-        className="px-(--spacing-7) py-(--spacing-5) border-l border-l-(--color-theme-stroke)  flex flex-row gap-(--spacing-3) "
+        className="px-16 py-8 border-l border-l-(--color-theme-stroke)  flex flex-row gap-4 "
       >
         <p className="text-md text-(--color-theme-foreground)">@H-Timw</p>
         <RiGithubFill

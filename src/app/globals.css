@@ -155,6 +155,8 @@
 
   /* spacing */
   --spacing: 2px;
+  /* that spacing was disable because the gap-x not using calc(--spacing * x),
+  it using calc(--spacing-x) => the document from tailwind v4 is not true now
   --spacing-1: 2px;
   --spacing-2: 4px;
   --spacing-3: 8px;
@@ -164,7 +166,7 @@
   --spacing-7: 32px;
   --spacing-8: 40px;
   --spacing-9: 48px;
-  --spacing-10: 64px;
+  --spacing-10: 64px; */
 
   /* border-radius */
   --radius-xs: 2px;
@@ -213,6 +215,10 @@
 }
 
 body {
-  color: var(--foreground);
-  font-family: var(--font-fira);
+  font-family: var(--font-fira-code);
 }
+
+button, a {
+  cursor: pointer;
+}
+

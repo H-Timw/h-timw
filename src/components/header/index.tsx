@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="flex flex-row justify-between border-b border-(--color-theme-stroke) w-full">
       <div className="flex header-name flex-row">
-        <div className="w-[311px] px-(--spacing-6) py-(--spacing-5) border-r border-(--color-theme-stroke)">
+        <div className="w-[326px] px-12 py-8 border-r border-(--color-theme-stroke)">
           <p className="text-md text-(--color-theme-foreground)">h-timw</p>
         </div>
         <div className="flex flex-row">
@@ -23,7 +23,7 @@ export default function Header() {
               href={navItem.href}
               key={`${navItem.href}_${index}`}
               className={clsx(
-                "px-(--spacing-7) py-(--spacing-5) border-r border-r-(--color-theme-stroke)",
+                "px-16 py-8 border-r border-r-(--color-theme-stroke)",
                 {
                   "text-(--color-heading-foreground) border-b-2 border-b-(--color-primary-background)":
                     pathName === navItem.href,
@@ -39,14 +39,11 @@ export default function Header() {
       <Link
         href="/contact"
         key="contact"
-        className={clsx(
-          "px-(--spacing-7) py-(--spacing-5) border-l border-l-(--color-theme-stroke)",
-          {
-            "text-(--color-heading-foreground) border-b-2 border-b-(--color-primary-background)":
-              pathName === "/contact",
-            "text-(--color-theme-foreground)": pathName !== "/contact",
-          }
-        )}
+        className={clsx("px-16 py-8 border-l border-l-(--color-theme-stroke)", {
+          "text-(--color-heading-foreground) border-b-2 border-b-(--color-primary-background)":
+            pathName === "/contact",
+          "text-(--color-theme-foreground)": pathName !== "/contact",
+        })}
       >
         <p>_contact-me</p>
       </Link>
