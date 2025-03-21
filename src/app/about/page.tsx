@@ -14,6 +14,7 @@ import {
 } from "@remixicon/react";
 import { useState } from "react";
 import styled from "styled-components";
+import Bio from "./components/bio";
 
 const AboutPageStyled = styled.div`
   input[type="checkbox"] + label {
@@ -122,6 +123,9 @@ export default function AboutMe() {
               name="bio"
               id="bio"
               className="hidden"
+              onChange={(e) => {
+                if (e?.target?.value) setActiveSubTab("bio");
+              }}
             />
             <label
               htmlFor="bio"
@@ -144,6 +148,9 @@ export default function AboutMe() {
               name="interests"
               id="interests"
               className="hidden"
+              onChange={(e) => {
+                if (e?.target?.value) setActiveSubTab("interests");
+              }}
             />
             <label
               htmlFor="interests"
@@ -166,6 +173,9 @@ export default function AboutMe() {
               name="education"
               id="education"
               className="hidden"
+              onChange={(e) => {
+                if (e?.target?.value) setActiveSubTab("education");
+              }}
             />
             <label
               htmlFor="education"
@@ -203,7 +213,7 @@ export default function AboutMe() {
             />
             <p className="text-md ">contacts</p>
           </label>
-          <div className="flex flex-col justify-start w-full ht-sub-menu text-(--color-theme-foreground)">
+          <div className="flex flex-col justify-start w-full ht-sub-menu gap-4 text-(--color-theme-foreground)">
             <div className="flex flex-row items-center gap-4">
               <RiMailFill
                 size={16}
@@ -245,7 +255,7 @@ export default function AboutMe() {
             />
             <p className="text-md ">find-me-also-in</p>
           </label>
-          <div className="flex flex-col justify-start w-full ht-sub-menu text-(--color-theme-foreground)">
+          <div className="flex flex-col justify-start gap-4 w-full ht-sub-menu text-(--color-theme-foreground)">
             <a
               href="https://www.freecodecamp.org/certification/timw8469/responsive-web-design"
               target="_blank"
@@ -293,29 +303,13 @@ export default function AboutMe() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-start justify-start h-full w-full gap-16">
-        <div className="flex flex-row min-w-[242px] justify-between items-center gap-2 text-(--color-theme-foreground) border-r border-b border-(--color-theme-stroke) px-12 py-6">
+      <div className="flex flex-col items-start justify-start h-full w-full">
+        <div className="flex flex-row min-w-[242px] justify-between items-center gap-2 text-(--color-theme-foreground) border-r border-(--color-theme-stroke) px-12 py-6">
           <p className="text-md">{subTab}</p>
           <RiCloseFill size={16} />
         </div>
-        <div className="flex flex-col items-center justify-start border-b border-(--color-theme-stroke)">
-          <input
-            type="checkbox"
-            name="personal-info"
-            id="personal-info"
-            defaultChecked
-            className="hidden"
-          />
-          <label
-            htmlFor="personal-info"
-            className="flex flex-row gap-6 cursor-pointer w-full items-center px-12 py-6 border-b border-(--color-theme-stroke)"
-          >
-            <RiArrowRightSFill
-              size={16}
-              className="ht-dropdown ht-main-menu"
-            />
-            <p className="text-md ">{subTab}</p>
-          </label>
+        <div className="flex flex-row items-center w-full justify-start border-t border-(--color-theme-stroke)">
+          <Bio />
         </div>
       </div>
     </AboutPageStyled>
